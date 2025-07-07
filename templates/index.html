@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Currency Recognition</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .header {
+      background-color: #1E88E5;
+      padding: 0;
+      position: fixed;
+      width: 100%;
+    }
+
+    .header-title {
+      color: white;
+      font-size: 30px;
+      padding: 20px;
+      margin: 0;
+    }
+    .body-button {
+      background-color: #1b7bd0;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      border: 3px solid transparent;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px;
+    }
+    .body-button:hover {
+      background-color: #f0f0f0;
+      border: 3px solid #1b7bd0;
+        color: #1b7bd0;
+    }
+    .body-text {
+      font-size: 20px;
+      color: #333;
+      margin: 20px 0;
+     background-color: white ;
+     padding: 20px;
+     border-radius: 40px;
+    }
+    .main{
+        height: 100vh;
+        width: 100%;
+        background: url('/images/bg1.jpg') no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #video, #upload-section, #capture-btn {
+      display: none;
+      margin-top: 20px;
+    }
+
+    .footer{
+        position: fixed;
+        bottom: 0;
+        width: 100%;}
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h2 class="header-title">Real-time Bangladeshi Banknote recognition using lightweight CNN models</h2>
+  </div>
+<div class="main">
+    
+  <div>
+    <p class="body-text">
+   This web app is an implementation of my thesis research
+    </p>
+    <button class="body-button" onclick="enableWebcam()">Use Webcam</button>
+    <button class="body-button" onclick="enableUpload()">Upload Image</button>
+  </div>
+
+  <video id="video" width="300" height="200" autoplay></video><br>
+  <button id="capture-btn" class="body-button" onclick="captureAndSend()">Capture</button>
+
+  <div id="upload-section">
+    <input type="file" id="file-input" accept="image/*" onchange="uploadAndSend()" />
+  </div>
+
+  <p id="result"></p>
+  
+</div>
+<footer class="footer">
+    <p>Developed by Subreena, BFH2011018F &copy; 2025</p>
+  </footer>
+  <script src="/static/script.js"></script>
+</body>
+</html>
