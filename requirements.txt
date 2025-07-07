@@ -1,5 +1,5 @@
 Flask
-numpy==1.24.4
+numpy>=1.22,<1.24
 opencv-python-headless
 joblib
 Pillow
