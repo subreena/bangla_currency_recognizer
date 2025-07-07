@@ -4,3 +4,4 @@ opencv-python-headless
 joblib
 Pillow
 tensorflow
+gdown
