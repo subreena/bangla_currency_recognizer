@@ -5,3 +5,4 @@ joblib
 Pillow
 tensorflow==2.12.0
 gdown
+scikit-learn
