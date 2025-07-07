@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: currency-recognizer
+    env: docker
+    plan: free
+    repo: https://github.com/subreena/bangla_currency_recognizer
+    branch: main
+    autoDeploy: true
